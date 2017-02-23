@@ -1,0 +1,311 @@
+1) Write a JAVA code with the class named ‘acad’ and a method ‘main’. Hard code the program
+with two integers and print the sum of those two.
+
+public class acad {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    int a1=4, b1=2;
+    int sum=0;
+    sum = a1+b1;
+    System.out.print("Sum of "+a1+" and "+b1+" is "+sum);
+	}
+
+}
+
+Output:
+Sum of 4 and 2 is 6
+
+
+
+2) Rewrite the above code, where, inputs are provided by the user at runtime and the output is
+printed.
+
+import java.util.Scanner;
+
+public class acad {  
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the value of 1st integer");
+	int a= sc.nextInt();
+	System.out.println("Enter the value of 2nd integer");
+	int b= sc.nextInt();
+    int sum=0;
+    sum = a+b;
+    System.out.print("Sum of "+a+" and "+b+" is "+sum);
+	}
+
+
+}
+
+
+
+Output:
+Enter the value of a
+4
+Enter the value of b
+4
+Sum of 4 and 4 is 8
+
+
+3) Write a program with a method name sum() that accepts two parameters from the user and
+print the sum two numbers. Output of the format should be as:
+First number is:
+Second number is:
+Sum is:
+
+
+import java.util.Scanner;
+
+public class Acad {
+	public void sum(int a, int b){
+		 int sum=0;
+		 sum = a+b;
+			System.out.println("Sum is:"+sum);
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Scanner sc = new Scanner(System.in);
+    System.out.print("First number is:");
+	int a= sc.nextInt();
+	System.out.print("Second number is:");
+	int b= sc.nextInt();
+    Acad add = new Acad();
+	add.sum(a,b);
+	}
+}
+Output:
+
+First number is:4
+Second number is:4
+Sum is:8
+
+4) Write a program to accepts two numbers from stdin and find all the odd as well as even
+numbers present in between them.
+
+import java.util.Scanner;
+
+public class Acad {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Scanner sc = new Scanner(System.in);
+    System.out.print("From: ");
+	int a= sc.nextInt();
+	System.out.print("To: ");
+	int b= sc.nextInt();
+	System.out.println("Even numbers are ");
+	for(int i=a;i<=b;i++)
+	{
+		if(i%2==0)
+		System.out.println(i);
+	}
+	System.out.println("Odd numbers are ");
+	for(int i=a;i<=b;i++)
+	{
+		if(i%2!=0)
+		System.out.println(i);
+	}
+   
+	}
+}
+
+Output:
+
+From: 2
+To: 10
+Even numbers are 
+2
+4
+6
+8
+10
+Odd numbers are 
+3
+5
+7
+9
+
+
+
+5) Joe is scared to go to school. When her dad asked the reason, Joe said she is unable to complete
+the task given by her teacher. The task was to find the “first 10 multiples” of the number entered
+from stdin.
+Example:
+Input: 3
+O/p:
+3 x 1 = 3
+3 x 2 = 6
+
+………
+3 x 10 = 30
+Help Joe in completing the task!
+
+
+import java.util.Scanner;
+
+public class Acad {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Input :");
+	int n= sc.nextInt();
+	if(n!=0)
+	{
+		System.out.println(n+" x 1 = "+n*1);
+		System.out.println(n+" x 2 = "+n*2);
+		System.out.println(n+" x 3 = "+n*3);
+		System.out.println(n+" x 4 = "+n*4);
+		System.out.println(n+" x 5 = "+n*5);
+		System.out.println(n+" x 6 = "+n*6);
+		System.out.println(n+" x 7 = "+n*7);
+		System.out.println(n+" x 8 = "+n*8);
+		System.out.println(n+" x 9 = "+n*9);
+		System.out.println(n+" x 10 = "+n*10);
+	}
+	else 
+	{
+		System.out.println(n+" x 1 = "+n*1);
+		System.out.println(n+" x 2 = "+n*2);
+		System.out.println(n+" x 3 = "+n*3);
+		System.out.println(n+" x 4 = "+n*4);
+		System.out.println(n+" x 5 = "+n*5);
+		System.out.println(n+" x 6 = "+n*6);
+		System.out.println(n+" x 7 = "+n*7);
+		System.out.println(n+" x 8 = "+n*8);
+		System.out.println(n+" x 9 = "+n*9);
+		System.out.println(n+" x 10 = "+n*10);
+	}
+		
+   
+	}
+}
+
+Output:
+
+Input :3
+3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
+3 x 4 = 12
+3 x 5 = 15
+3 x 6 = 18
+3 x 7 = 21
+3 x 8 = 24
+3 x 9 = 27
+3 x 10 = 30
+
+
+
+6) Write a program consisting method sum() and demonstrate the concept of method
+overloading using this 
+
+import java.util.Scanner;
+
+public class Acad {
+	public void sum(int a, int b){
+		 int sum=0;
+		 sum = a+b;
+			System.out.println("Sum is:"+sum);
+
+	}
+	public void sum(int a, int b,int c){
+		 int sum=0;
+		 sum = a+b+c;
+			System.out.println("Sum is:"+sum);
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Scanner sc = new Scanner(System.in);
+    System.out.print("First number is:");
+	int a= sc.nextInt();
+	System.out.print("Second number is:");
+	int b= sc.nextInt();
+	System.out.print("Third number is:");
+	int c= sc.nextInt();
+    Acad add = new Acad();
+	add.sum(a,b);
+	add.sum(a, b,c);
+	
+	}
+}
+
+Output:
+
+First number is:5
+Second number is:5
+Third number is:5
+Sum is:10
+Sum is:15
+
+
+7) Can you overload a method with the same return type? Explain your answer with proper logic.
+	Yes, a method with same return type can be overloaded but only with  variations in the number of arguments. For example,
+		class Adder{  
+				static int add(int a,int b){return a+b;}  
+				static int add(int a,int b,int c){return a+b+c;}  
+			}  
+		class TestOverloading1{  
+					public static void main(String[] args){  
+					System.out.println(Adder.add(11,11));  
+					System.out.println(Adder.add(11,11,11));  
+				}}  
+
+
+8) Write a program in java using Arrays that sorts the element in descending order.
+
+
+import java.util.Scanner;
+public class Acad 
+{
+    public static void main(String[] args) 
+    {
+        int n, temp;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the size of an array:");
+        n = s.nextInt();
+        int a[] = new int[n];
+        System.out.println("Enter all the elements:");
+        for (int i = 0; i < n; i++) 
+        {
+            a[i] = s.nextInt();
+        }
+        for (int i = 0; i < n; i++) 
+        {
+            for (int j = i + 1; j < n; j++) 
+            {
+                if (a[i] < a[j]) 
+                {
+                    temp = a[i];
+                    a[i] = a[j];
+                    a[j] = temp;
+                }
+            }
+        }
+        System.out.print("Descending Order:");
+        for (int i = 0; i < n - 1; i++) 
+        {
+            System.out.print(a[i] + ",");
+        }
+        System.out.print(a[n - 1]);
+    }
+}
+
+Output:
+
+Enter the size of an array:5
+Enter all the elements:
+1
+28
+99
+55
+0
+Descending Order:99,55,28,1,0
+
